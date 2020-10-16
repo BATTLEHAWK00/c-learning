@@ -29,21 +29,14 @@ ggggg
 */
 #include<stdio.h>
 #include<malloc.h>
-//char a[1000][1000];
-//char last[1000][1000];
+char a[1000][1000];
+char last[1000][1000];
 int main()
 {
 	int n,m;
 	scanf("%d",&n);
 	scanf("%d",&m);
 	int i,j,k,mon;
-	
-	char **a=(char**)malloc(n*sizeof(char*));
-	for(i=0;i<n;i++)
-		a[i]=(char*)malloc(n*sizeof(char));
-	char **last=(char**)malloc(n*sizeof(char*));
-	for(i=0;i<n;i++)
-		last[i]=(char*)malloc(n*sizeof(char));
 	
 	for(i=0;i<n;i++)
 		for(j=0;j<m;j++)
@@ -55,6 +48,7 @@ int main()
 			last[i][j]=p;
 		}
 	scanf("%d",&mon);
+	
 	for(k=1;k<=mon;k++)
 	{
 		for(i=0;i<n;i++)
